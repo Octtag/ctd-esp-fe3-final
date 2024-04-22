@@ -1,0 +1,91 @@
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 60vh;
+
+    label {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input,
+    button {
+        margin: 10px 0;
+        padding: 12px 20px;
+        width: 80%; 
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    form {
+        height: auto;
+    }
+
+    input:focus,
+    button:hover {
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .errorMessage {
+        color: red;
+    }
+
+    .successMessage {
+        color: green;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: #4CAF50; 
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    p {
+        color: red;
+        margin-top: 10px;
+    }
+}
+
+.dark {
+    background-color: #252525;
+    color: #fff;
+
+    input,
+    button {
+        background-color: #555;
+        color: #fff;
+        border: 1px solid #666;
+    }
+
+    button {
+        background-color: #008CBA;
+    }
+}
+
+.light {
+    background-color: #fff;
+    color: #333;
+
+    input,
+    button {
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #4CAF50; 
+    }
+}

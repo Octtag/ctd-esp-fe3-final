@@ -1,0 +1,205 @@
+// Navbar.module.scss
+
+.navbar {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5% 5%;
+
+  &.dark {
+    background-color: #333;
+    color: #fff;
+  }
+
+  &.light {
+    background-color: #f7f7f7;
+    color: #333;
+  }
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logoCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+
+  img {
+    max-width: 40px;
+  }
+  span {
+    margin-left: 4px;
+    font-weight: 400;
+  }
+
+  &.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  &.light {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .conNombre{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .navTitle{
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    p{
+      margin: 0;
+      margin-left: 4px;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff; // Default color
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    .light & {
+      background-color: #252525;
+    }
+  }
+
+  #checkbox:checked + & {
+    .bar:nth-child(1) { 
+      transform: translateY(12px) rotate(45deg);
+    }
+    .bar:nth-child(2) { 
+      opacity: 0;
+    }
+    .bar:nth-child(3) { 
+      transform: translateY(-12px) rotate(-45deg);
+    }
+  }
+}
+
+.navItems {
+  display: flex;
+
+  @media (max-width: 500px) {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    background-color: inherit;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.menuOpen {
+  display: flex !important;
+  width: 100%;
+  justify-content: flex-end;
+
+  &.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  &.light {
+    background-color: #fff;
+    color: #333;
+  }
+  
+}
+
+.navItem {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 8px;
+
+  svg{
+    margin-left: 4px;
+  }
+
+  &.dark {
+    color: #fff;
+  }
+
+  &.light {
+    color: #333;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    margin: 5px auto;
+  }
+}
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 16px;
+
+  &.dark {
+    color: #252525;
+    background-color: #fff;
+  }
+
+  &.light {
+    color: #fff;
+    background-color: #252525;
+  }
+
+  @media (max-width: 500px) {
+    width: 95%;
+    margin: 5px auto;
+  }
+}
+
+// Extra styles for the toggle animation if required
+.checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .3s;
+}
